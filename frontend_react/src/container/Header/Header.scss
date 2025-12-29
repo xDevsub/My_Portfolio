@@ -1,0 +1,260 @@
+#home {
+    position: relative;
+    background: url("../../assets/bgIMG.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: repeat;
+
+    // disable the default padding styles
+    .app__wrapper {
+        padding: 0;
+
+        .copyright {
+            display: none;
+        }
+    }
+}
+
+.app__header {
+    flex: 1;
+    width: 100%;
+    height: 100%;
+    height: 100vh;
+    flex-direction: row;
+
+    padding: 6rem 2rem 0rem;
+
+    @media screen and (min-width: 2000px) {
+        padding-top: 8rem;
+    }
+
+    @media screen and (max-width: 1200px) {
+        flex-direction: column;
+    }
+
+    @media screen and (max-width: 450px) {
+        padding: 6rem 1rem 2rem;
+    }
+}
+
+.app__header-info {
+    flex: 0.65;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    height: 100%;
+
+    margin: 0 2rem;
+
+    @media screen and (max-width: 1200px) {
+        width: 100%;
+        margin-right: 0rem;
+    }
+}
+
+//RESUME DOWNLOAD BADGE
+.app__header-badge {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    flex-direction: column;
+    margin-left: 50px;
+
+    .tag-cmp {
+        padding: 1rem 2rem;
+        background: var(--white-color);
+        border-radius: 15px;
+        flex-direction: row;
+        width: auto;
+        ;
+
+        box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .tag-cmp {
+        flex-direction: column;
+
+
+        p {
+            width: 100%;
+            text-transform: uppercase;
+            text-align: left;
+            color: rgb(0, 0, 0);
+            font-weight: 700;
+        }
+    }
+
+    @media screen and (max-width: 1200px) {
+        bottom: 20; // Moves up on tablets
+        margin-top: -90px;
+    }
+
+    @media screen and (max-width: 768px) {
+        bottom: 20%; // Moves up on small devices 
+    }
+
+    @media screen and (max-width: 450px) {
+        bottom: 20%; // Moves the badge higher on small screens
+    }
+}
+
+
+// Three cricles
+.app__header-circles {
+    flex: 0.75rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    height: 100%;
+    margin-left: 1rem;
+
+    div {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+
+        background: var(--white-color);
+        box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+
+        img {
+            width: 60%;
+            height: 60%;
+        }
+    }
+
+    // circles with different height & width
+
+    div:nth-child(1) {
+        width: 100px;
+        height: 100px;
+    }
+
+    div:nth-child(2) {
+        margin: 1.75rem;
+        width: 130px;
+        height: 130px;
+    }
+
+    div:nth-child(3) {
+        width: 70px;
+        height: 70px;
+    }
+
+    @media screen and (min-width: 2000px) {
+        div:nth-child(1) {
+            width: 200px;
+            height: 200px;
+        }
+
+        div:nth-child(2) {
+            width: 400px;
+            height: 400px;
+        }
+
+        div:nth-child(3) {
+            width: 170px;
+            height: 170px;
+        }
+
+    }
+
+    @media screen and (max-width: 1200px) {
+        width: 100%;
+
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin-left: 10;
+        margin-top: -140px;
+
+        div {
+            margin: 1rem;
+        }
+    }
+}
+
+//s=span, p=name and main name
+.app__header-name {
+    margin: 7rem;
+    z-index: 1;
+
+    .text__container {
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+
+        .s-span {
+            font-size: 80px;
+            align-items: flex-start;
+        }
+
+
+        .p-name {
+            font-size: 1.2rem;
+        }
+
+        .h-name {
+            font-size: 3rem; // Default size
+            font-weight: bold;
+            width: 10%;
+            height: 100%;
+        }
+
+        @media screen and (max-width: 768px) {
+            font-size: 10; // Smaller size on small devices
+            bottom: 90%;
+        }
+
+        @media screen and (max-width: 1200px) {
+            // Further shrinks name on small screens
+            bottom: 40%;
+        }
+
+        @media screen and (max-width: 768px) {
+            bottom: 90px; // Moves up on small devices
+            flex-direction: column;
+            left: 20%;
+        }
+    }
+}
+
+
+// Middle BIG CIRCLE IMAGE
+.app__header-img {
+    flex: 1.2;
+    margin: 1rem;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    position: relative;
+
+    .overlay_circle {
+        position: absolute;
+        left: 0;
+        right: 15%;
+        bottom: 10%;
+        z-index: 0;
+        width: 120%;
+        height: 100%;
+
+        @media screen and (max-width: 768px) {
+            left: 10%;
+            height: 70%; // Moves up on small devices
+            width: 80%;
+        }
+
+        @media screen and (max-width: 1200px) {
+            bottom: 40%;
+            left: 30%;
+        }
+
+        @media screen and (max-width: 368px) {
+            height: 100%; // Moves up on small devices
+            width: 120%;
+            bottom: 90%; // Moves up on small devices
+        }
+    }
+
+
+}
