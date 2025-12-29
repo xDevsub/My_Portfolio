@@ -4,7 +4,6 @@ import { images } from '../../constants';
 import { AppWrap, MotionWrap } from '../../wrapper';
 import { client } from '../../client';
 import './Footer.scss';
-import { m } from 'framer-motion';
 
 const Footer = () => {
   const [formData, setFormData] = useState({ name: '', email: '', message: '' });
