@@ -29,10 +29,10 @@
     flex: 1;
     width: 100%;
     flex-direction: column;
-    padding: 4rem 2rem;
+    padding: 2rem 1rem;
 
     @media screen and (max-width: 450px) {
-        padding: 4rem 1rem 2rem;
+        padding: 2rem 0.5rem 1rem;
     }
 }
 
@@ -52,7 +52,7 @@
 }
 
 .head-text {
-    font-size: clamp(2rem, 3.5vw, 4rem);
+    font-size: clamp(1.5rem, 2.5vw, 3rem);
     font-weight: 800;
     text-align: center;
     color: var(--black-color);
@@ -64,14 +64,14 @@
 }
 
 .p-text {
-    font-size: clamp(0.8rem, 1vw, 1.75rem);
+    font-size: clamp(0.7rem, 0.8vw, 1.25rem);
     text-align: left;
     color: var(--gray-color);
     line-height: 1.5;
 }
 
 .bold-text {
-    font-size: clamp(0.9rem, 1.2vw, 2rem);
+    font-size: clamp(0.8rem, 1vw, 1.5rem);
     font-weight: 800;
     color: var(--black-color);
     text-align: left;
@@ -86,8 +86,8 @@
     padding: 1rem;
 
     div {
-        width: clamp(2.5rem, 4vw, 4.375rem);
-        height: clamp(2.5rem, 4vw, 4.375rem);
+        width: clamp(2rem, 3vw, 3.5rem);
+        height: clamp(2rem, 3vw, 3.5rem);
         border-radius: 50%;
         background-color: var(--white-color);
         margin: clamp(0.25rem, 0.5vw, 0.5rem) 0;
@@ -100,8 +100,8 @@
         transition: all 0.3s ease-in-out;
 
         svg {
-            width: clamp(0.9375rem, 1.5vw, 1.875rem);
-            height: clamp(0.9375rem, 1.5vw, 1.875rem);
+            width: clamp(0.75rem, 1.2vw, 1.5rem);
+            height: clamp(0.75rem, 1.2vw, 1.5rem);
             color: var(--gray-color);
         }
 
@@ -125,8 +125,8 @@
     padding: 1rem;
 
     .app__navigation-dot {
-        width: clamp(0.625rem, 1vw, 1.25rem);
-        height: clamp(0.625rem, 1vw, 1.25rem);
+        width: clamp(0.5rem, 0.8vw, 1rem);
+        height: clamp(0.5rem, 0.8vw, 1rem);
         border-radius: 50%;
         background-color: #cbcbcb;
         margin: 0.5rem;

@@ -18,8 +18,9 @@ const App = () => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           const sectionId = entry.target.id;
-          // Update URL without triggering scroll
-          window.history.replaceState(null, null, `#${sectionId}`);
+          // Update URL without triggering scroll - use root path for home
+          const url = sectionId === 'home' ? '/' : `#${sectionId}`;
+          window.history.replaceState(null, null, url);
         }
       });
     }, observerOptions);

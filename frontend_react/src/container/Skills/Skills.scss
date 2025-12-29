@@ -8,12 +8,12 @@
 .app__skills-container {
     width: 100%;
     max-width: 110%;
-    margin-top: clamp(3rem, 5vw, 5rem);
+    margin-top: clamp(2rem, 3vw, 3.5rem);
 
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    gap: clamp(2rem, 4vw, 5rem);
+    gap: clamp(1.5rem, 3vw, 3.5rem);
 }
 
 //Skills items
@@ -24,7 +24,7 @@
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    gap: clamp(1rem, 1.5vw, 2rem);
+    gap: clamp(0.75rem, 1vw, 1.5rem);
 }
 
 .app__skills-item {
@@ -34,8 +34,8 @@
     transition: all 0.3s ease-in-out;
 
     div {
-        width: clamp(5rem, 7vw, 9.375rem);
-        height: clamp(5rem, 7vw, 9.375rem);
+        width: clamp(4rem, 5.5vw, 7rem);
+        height: clamp(4rem, 5.5vw, 7rem);
         border-radius: 50%;
         background-color: #fff;
 
@@ -45,7 +45,7 @@
         }
 
         &:hover {
-            box-shadow: 0 0 clamp(20px, 2vw, 25px) #fef4f5;
+            box-shadow: 0 0 clamp(15px, 1.5vw, 20px) #fef4f5;
         }
     }
 

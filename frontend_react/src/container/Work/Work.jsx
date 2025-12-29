@@ -46,7 +46,7 @@ const Work = () => {
     <>
       <h2 className="head-text">My <span> Recent</span> Works</h2>
       <div style={{marginTop: 30,  }} className="app__work-filter">
-        {['UI/UX', 'Web App', 'Mobile App', 'React JS', 'ALL']
+        {['UI/UX', 'WEB APP', 'MOBILE APP', 'REACT JS', 'ALL']
           .map((item, index) => (
             <div
               key={index}

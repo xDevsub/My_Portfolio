@@ -9,7 +9,7 @@ const Navbar = () => {
   const [toggle, setToggle] = useState(false);
 
   const scrollToHome = () => {
-    window.location.href = '#home';
+    window.location.href = '/';
   };  
 
   return (
@@ -22,7 +22,7 @@ const Navbar = () => {
         {['home', 'about', 'work', 'skills', 'contact'].map((item) => (
           <li className='app__flex p-text' key={`link-${item}`}>
             <div />
-            <a href={`#${item}`}>{item}</a>
+            <a href={item === 'home' ? '/' : `#${item}`}>{item}</a>
           </li>
         ))}
       </ul>
@@ -38,7 +38,7 @@ const Navbar = () => {
             <ul>
               {['home', 'about', 'work', 'skills', 'contact'].map((item) => (
                 <li key={`menu-${item}`}>
-                  <a href={`#${item}`} onClick={() => setToggle(false)}>
+                  <a href={item === 'home' ? '/' : `#${item}`} onClick={() => setToggle(false)}>
                     {item}
                   </a>
                 </li>
