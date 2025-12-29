@@ -35,7 +35,7 @@ const Work = () => {
       if(item.toUpperCase() === 'ALL')  {
         setFilterWork(works);
       } else {
-        setFilterWork(works.filter((work) => work.tags.includes(item)));
+        setFilterWork(works.filter((work) => work.tags && work.tags.includes(item)));
       }
     }, 500);
 
@@ -105,8 +105,7 @@ const Work = () => {
               <p className='p-text' style={{ marginTop: 10 }}>{work.description}</p>
             
             <div className="app__work-tag app__flex">
-              <p className="p-text">{work.tags[0]}</p>
-
+              <p className="p-text">{work.tags && work.tags.length > 0 ? work.tags[0] : 'Project'}</p>
             </div>
             </div>
           </div>
