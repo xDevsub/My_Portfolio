@@ -16,6 +16,10 @@ A modern, responsive, and dynamic developer portfolio website built with React a
 - 📧 **Contact Form**: Integrated email functionality
 - 📄 **Resume Download**: Direct resume download feature
 - 🔄 **Real-time Updates**: Content updates instantly from CMS
+- 🌐 **Social Media Integration**: Dynamic social links from CMS
+- 🎯 **Smart Navigation**: URL updates automatically as you scroll
+- 🏠 **Logo Navigation**: Click logo to return to homepage
+- 📱 **Mobile-First**: Touch-friendly mobile navigation
 
 ## 🛠️ Tech Stack
 
@@ -29,7 +33,7 @@ A modern, responsive, and dynamic developer portfolio website built with React a
 ### Backend / CMS (`backend_sanity`)
 - **Sanity.io**: Headless CMS for content management
 - **Sanity Studio**: Customizable content editor
-- **Custom Schemas**: Abouts, Skills, Experiences, Works, Resume, Contact
+- **Custom Schemas**: Abouts, Skills, Experiences, Works, Resume, Contact, Social Media
 
 ## 📂 Project Structure
 
@@ -144,18 +148,40 @@ npm start
 ```
 🌐 React app will be available at `http://localhost:3000`
 
-## 📝 Content Management
+## 🎯 Special Features
 
-1. **Access Sanity Studio**: Navigate to `http://localhost:3333` (after starting the backend)
-2. **Add Content**: Use the studio interface to add:
-   - About information
-   - Skills and technologies
-   - Work experience
-   - Projects/Portfolio items
-   - Resume file
-   - Contact details
+### Smart Navigation
+- **Scroll-Based URLs**: URL automatically updates as you scroll through sections
+- **Logo Click**: Click the logo to instantly return to homepage
+- **Smooth Scrolling**: All navigation uses smooth scroll behavior
 
+### Social Media Integration
+- **Dynamic Icons**: Social media icons always visible on the left side
+- **CMS Managed**: Links fetched from Sanity CMS
+- **Platform Support**: Twitter, Facebook, Instagram (easily extensible)
+
+### Modern Development
+- **Fluid Typography**: Uses `clamp()` for responsive text sizing
+- **CSS Custom Properties**: Consistent theming with CSS variables
+- **Component Architecture**: Modular, reusable React components
 3. **Real-time Updates**: Changes in Sanity will reflect immediately in your React app
+
+## 🎯 Special Features
+
+### Smart Navigation
+- **Scroll-Based URLs**: URL automatically updates as you scroll through sections
+- **Logo Click**: Click the logo to instantly return to homepage
+- **Smooth Scrolling**: All navigation uses smooth scroll behavior
+
+### Social Media Integration
+- **Dynamic Icons**: Social media icons always visible on the left side
+- **CMS Managed**: Links fetched from Sanity CMS
+- **Platform Support**: Twitter, Facebook, Instagram (easily extensible)
+
+### Modern Development
+- **Fluid Typography**: Uses `clamp()` for responsive text sizing
+- **CSS Custom Properties**: Consistent theming with CSS variables
+- **Component Architecture**: Modular, reusable React components
 
 ## 🎨 Customization
 
