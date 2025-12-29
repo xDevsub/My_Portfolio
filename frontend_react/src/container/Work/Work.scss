@@ -4,6 +4,20 @@
     flex-direction: column;
 }
 
+.head-text {
+    font-size: clamp(1.5rem, 2.5vw, 3rem);
+    font-weight: 800;
+    text-align: center;
+    color: var(--black-color);
+    text-transform: capitalize;
+    width: 100%;
+    margin: 0;
+
+    span {
+        color: var(--secondary-color);
+    }
+}
+
 .app__work-filter {
     display: flex;
     flex-direction: row;
@@ -54,7 +68,11 @@
         transition: all 0.3s ease;
 
         &:hover {
-            box-shadow: 0 0 clamp(20px, 2vw, 25px) rgba(0, 0, 0, 0.2)
+            box-shadow: 0 0 clamp(20px, 2vw, 25px) rgba(0, 0, 0, 0.2);
+
+            .app__work-hover {
+                opacity: 1;
+            }
         }
     }
 }
@@ -109,6 +127,11 @@
     }
 }
 
+@media screen and (max-width: 768px) {
+    .app__work-hover {
+        opacity: 1;
+    }
+}
 
 .app__work-content{
     padding: 0.5rem;

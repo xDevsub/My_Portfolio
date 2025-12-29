@@ -5,6 +5,20 @@
 
 }
 
+.head-text {
+    font-size: clamp(1.5rem, 2.5vw, 3rem);
+    font-weight: 800;
+    text-align: center;
+    color: var(--black-color);
+    text-transform: capitalize;
+    width: 100%;
+    margin: 0;
+
+    span {
+        color: var(--secondary-color);
+    }
+}
+
 .app__footer-cards {
     width: min(100%, 60rem);
     display: flex;
@@ -16,7 +30,6 @@
 
     @media screen and (max-width: 768px) {
         flex-direction: column;
-        align-items: flex-start;
     }
 
     .app__footer-card {

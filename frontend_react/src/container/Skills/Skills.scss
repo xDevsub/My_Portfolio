@@ -4,6 +4,20 @@
     flex-direction: column;
 }
 
+.head-text {
+    font-size: clamp(1.5rem, 2.5vw, 3rem);
+    font-weight: 800;
+    text-align: center;
+    color: var(--black-color);
+    text-transform: capitalize;
+    width: 100%;
+    margin: 0;
+
+    span {
+        color: var(--secondary-color);
+    }
+}
+
 //container to hold skills and experience
 .app__skills-container {
     width: 100%;
