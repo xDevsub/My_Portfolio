@@ -1,8 +1,7 @@
 {
-  "buildCommand": "cd frontend_react && npm install && npm run build",
+  "buildCommand": "npm --prefix frontend_react install && npm --prefix frontend_react run build",
   "outputDirectory": "frontend_react/build",
-  "devCommand": "cd frontend_react && npm start",
-  "installCommand": "cd frontend_react && npm install",
+  "installCommand": "npm --prefix frontend_react install",
   "framework": null,
   "rewrites": [
     {
