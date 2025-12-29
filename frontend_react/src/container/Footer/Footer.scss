@@ -14,6 +14,11 @@
     margin: clamp(2rem, 4vw, 4rem) clamp(1rem, 2vw, 2rem) 2rem;
     gap: clamp(0.5rem, 1vw, 1rem);
 
+    @media screen and (max-width: 768px) {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
     .app__footer-card {
         min-width: clamp(18rem, 20vw, 18.125rem);
         width: min(100%, 19rem);
