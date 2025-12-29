@@ -92,7 +92,7 @@
     align-items: flex-start;
     height: 100%;
     margin-left: 2rem;
-    margin-top: -3rem;
+    margin-top: -2rem;
 
     div {
         width: 80px;
@@ -150,9 +150,10 @@
         flex-direction: row;
         flex-wrap: wrap;
         margin-left: 0;
+        margin-bottom: 2rem;
 
         div {
-            margin: 1rem;
+            margin: -2rem;
         }
     }
 }
@@ -175,7 +176,7 @@
 
     @media screen and (max-width: 1200px) {
         margin: 3rem 0;
-        top: 0;
+        bottom: 50px;
     }
 
 }
