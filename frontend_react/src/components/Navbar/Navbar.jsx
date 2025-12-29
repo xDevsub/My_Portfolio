@@ -8,10 +8,14 @@ import './Navbar.scss';
 const Navbar = () => {
   const [toggle, setToggle] = useState(false);
 
+  const scrollToHome = () => {
+    window.location.href = '#home';
+  };  
+
   return (
     <nav className='app__navbar'>
       <div className='app__navbar-logo'>
-        <img src={images.logo} alt="logo" />
+        <img src={images.logo} alt="logo" onClick={scrollToHome} style={{ cursor: 'pointer' }} />
       </div>
 
       <ul className='app__navbar-links'>
