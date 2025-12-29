@@ -12,26 +12,9 @@
   --white-color: #ffffff;
 }
 
-html {
-  /* This shrinks the base scale of the entire site to 90%. 
-     If it's still too big, try 85% or 80%. */
-  font-size:60%; 
-}
-
-body {
-  font-family: var(--font-base);
-  background-color: var(--primary-color);
-  color: var(--black-color);
-  /* This prevents a 'zoomed-in' feel on high-resolution screens */
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-/* Update your * selector to ensure font-size is inherited correctly */
 * {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
   scroll-behavior: smooth;
-  font-family: var(--font-base); /* Keeps your font consistent */
 }
