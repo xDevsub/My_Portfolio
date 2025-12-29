@@ -4,6 +4,7 @@ import experiences from './experiences';
 import works from './works';
 import skills from './skills';
 import resume from './resume';
+import socialMedia from './socialMedia';
 
 // Combine all schemas in a single array
 const schemaTypes = [
@@ -13,6 +14,7 @@ const schemaTypes = [
     works,
     skills,
     resume,
+    socialMedia,
 ];
 
 export default schemaTypes; 
