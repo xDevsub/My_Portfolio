@@ -148,9 +148,15 @@
     .copyright {
         padding: 2rem;
     }
+
+    .app__container {
+        flex-direction: column;
+    }
 }
 
 /* Specific handling for Samsung S24 Ultra and similar devices */
 @media screen and (max-width: 450px) and (min-resolution: 3dppx) {
-  /* Larger, more appropriate sizes for high-DPI screens */
+    .app__wrapper {
+        padding: 1rem 0.25rem 0.5rem;
+    }
 }
