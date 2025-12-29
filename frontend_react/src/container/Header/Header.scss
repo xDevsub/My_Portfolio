@@ -19,21 +19,12 @@
     flex: 1;
     width: 100%;
     height: 100%;
-    height: 100vh;
     flex-direction: row;
 
-    padding: 6rem 2rem 0rem;
-
-    @media screen and (min-width: 2000px) {
-        padding-top: 8rem;
-    }
+    padding: clamp(6rem, 8vw, 8rem) clamp(1rem, 2vw, 2rem) clamp(0rem, 2vw, 2rem);
 
     @media screen and (max-width: 1200px) {
         flex-direction: column;
-    }
-
-    @media screen and (max-width: 450px) {
-        padding: 6rem 1rem 2rem;
     }
 }
 
@@ -45,7 +36,7 @@
     align-items: flex-start;
     height: 100%;
 
-    margin: 0 2rem;
+    margin: 0 clamp(0rem, 3vw, 2rem);
 
     @media screen and (max-width: 1200px) {
         width: 100%;
@@ -53,56 +44,48 @@
     }
 }
 
-//RESUME DOWNLOAD BADGE
 .app__header-badge {
+    width: 100%;
     display: flex;
     justify-content: flex-end;
     align-items: flex-end;
     flex-direction: column;
-    margin-left: 50px;
 
+    .badge-cmp,
     .tag-cmp {
-        padding: 1rem 2rem;
+        padding: clamp(0.75rem, 1.5vw, 1rem) clamp(1.5rem, 2.5vw, 2rem);
         background: var(--white-color);
-        border-radius: 15px;
+        border-radius: clamp(12px, 1.5vw, 15px);
         flex-direction: row;
         width: auto;
-        ;
 
-        box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+        box-shadow: 0px 0px clamp(15px, 2vw, 20px) rgba(0, 0, 0, 0.1);
     }
 
     .tag-cmp {
         flex-direction: column;
-
+        margin-top: clamp(2rem, 4vw, 3rem);
 
         p {
             width: 100%;
             text-transform: uppercase;
-            text-align: left;
-            color: rgb(0, 0, 0);
-            font-weight: 700;
+            text-align: right;
         }
     }
 
+    span {
+        font-size: clamp(2rem, 4vw, 5rem);
+    }
+
     @media screen and (max-width: 1200px) {
-        bottom: 20; // Moves up on tablets
-        margin-top: -90px;
-    }
-
-    @media screen and (max-width: 768px) {
-        bottom: 20%; // Moves up on small devices 
-    }
-
-    @media screen and (max-width: 450px) {
-        bottom: 20%; // Moves the badge higher on small screens
+        justify-content: flex-start;
+        align-items: flex-start;
     }
 }
 
 
-// Three cricles
 .app__header-circles {
-    flex: 0.75rem;
+    flex: 0.75;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -133,8 +116,8 @@
 
     div:nth-child(2) {
         margin: 1.75rem;
-        width: 130px;
-        height: 130px;
+        width: 150px;
+        height: 150px;
     }
 
     div:nth-child(3) {
@@ -143,11 +126,6 @@
     }
 
     @media screen and (min-width: 2000px) {
-        div:nth-child(1) {
-            width: 200px;
-            height: 200px;
-        }
-
         div:nth-child(2) {
             width: 400px;
             height: 400px;
@@ -158,15 +136,17 @@
             height: 170px;
         }
 
+        div:nth-child(1) {
+            width: 200px;
+            height: 200px;
+        }
     }
 
     @media screen and (max-width: 1200px) {
         width: 100%;
-
         flex-direction: row;
         flex-wrap: wrap;
-        margin-left: 10;
-        margin-top: -140px;
+        margin-left: 0;
 
         div {
             margin: 1rem;
@@ -174,87 +154,66 @@
     }
 }
 
-//s=span, p=name and main name
+.app__header-img {
+    flex: 1;
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    ;
+
+    .overlay_circle {
+        width: 90%;
+        height: 95%;
+    }
+
+    @media screen and (max-width: 1200px) {
+        margin: 9rem 0;
+    }
+
+}
+
 .app__header-name {
-    margin: 7rem;
-    z-index: 1;
+    position: absolute;
+    top: 30%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    width: 65%;
+    max-width: 60%;
+    text-align: center;
+    pointer-events: none;
 
     .text__container {
+        display: flex;
         flex-direction: column;
         align-items: center;
+        justify-content: center;
         position: relative;
 
         .s-span {
-            font-size: 80px;
-            align-items: flex-start;
+            font-size: clamp(2rem, 4.5vw, 6rem);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: clamp(0.5rem, 1vw, 1.5rem);
         }
 
-
         .p-name {
-            font-size: 1.2rem;
+            font-size: clamp(1rem, 1.8vw, 2.25rem);
+            margin-bottom: clamp(0.5rem, 0.8vw, 1rem);
+            color: var(--gray-color);
         }
 
         .h-name {
-            font-size: 3rem; // Default size
+            font-size: clamp(1.75rem, 3.5vw, 5rem);
             font-weight: bold;
-            width: 10%;
-            height: 100%;
-        }
-
-        @media screen and (max-width: 768px) {
-            font-size: 10; // Smaller size on small devices
-            bottom: 90%;
-        }
-
-        @media screen and (max-width: 1200px) {
-            // Further shrinks name on small screens
-            bottom: 40%;
-        }
-
-        @media screen and (max-width: 768px) {
-            bottom: 90px; // Moves up on small devices
-            flex-direction: column;
-            left: 20%;
+            width: auto;
+            max-width: 100%;
+            line-height: 1.2;
+            color: var(--black-color);
         }
     }
-}
-
-
-// Middle BIG CIRCLE IMAGE
-.app__header-img {
-    flex: 1.2;
-    margin: 1rem;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    position: relative;
-
-    .overlay_circle {
-        position: absolute;
-        left: 0;
-        right: 15%;
-        bottom: 10%;
-        z-index: 0;
-        width: 120%;
-        height: 100%;
-
-        @media screen and (max-width: 768px) {
-            left: 10%;
-            height: 70%; // Moves up on small devices
-            width: 80%;
-        }
-
-        @media screen and (max-width: 1200px) {
-            bottom: 40%;
-            left: 30%;
-        }
-
-        @media screen and (max-width: 368px) {
-            height: 100%; // Moves up on small devices
-            width: 120%;
-            bottom: 90%; // Moves up on small devices
-        }
-    }
-
-
 }

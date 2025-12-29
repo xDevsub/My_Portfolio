@@ -6,51 +6,38 @@
 
 //container to hold skills and experience
 .app__skills-container {
-    width:110%;
-    margin-top: 5rem;
+    width: 100%;
+    max-width: 110%;
+    margin-top: clamp(3rem, 5vw, 5rem);
 
     display: flex;
     flex-direction: row;
-    
-    @media screen and (max-width: 900px) {
-        width: 100%;
-        flex-direction: column;
-
-    }
+    flex-wrap: wrap;
+    gap: clamp(2rem, 4vw, 5rem);
 }
 
 //Skills items
 .app__skills-list {
     flex: 1;
+    min-width: min(100%, 300px);
     display: flex;
     flex-wrap: wrap;
-    justify-content: flex-start;
-    align-items: flex-start;
-
-
-    margin-right: 5rem;
-
-    @media screen and (max-width: 900px) {
-        margin-right: 0;
-        justify-content: center;
-        align-items: center;
-    }
+    justify-content: center;
+    align-items: center;
+    gap: clamp(0.5rem, 1vw, 1rem);
 }
 
 .app__skills-item {
     flex-direction: column;
     text-align: center;
 
-    margin: 1rem;
-
     transition: all 0.3s ease-in-out;
 
     div {
-        width: 90px;
-        height: 90px;
+        width: clamp(5rem, 7vw, 9.375rem);
+        height: clamp(5rem, 7vw, 9.375rem);
         border-radius: 50%;
         background-color: #fff;
-
 
         img {
             width: 50%;
@@ -58,34 +45,14 @@
         }
 
         &:hover {
-            box-shadow: 0 0 25px #fef4f5;
-        }
-
-        @media screen and (min-width: 2000px) {
-            width: 150px;
-            height: 150px;
-        }
-
-        @media screen and (min-width: 2000px) {
-            width: 70px;
-            height: 70px;
-
+            box-shadow: 0 0 clamp(20px, 2vw, 25px) #fef4f5;
         }
     }
 
     p {
         font-weight: 500;
-        margin-top: 0.5rem;
-    }
-
-
-    @media screen and (min-width: 2000px) {
-        margin: 1rem 2rem;
-
-        p {
-            margin-top: 1rem;
-        }
-
+        margin-top: clamp(0.5rem, 1vw, 1rem);
+        font-size: clamp(0.875rem, 1vw, 1rem);
     }
 }
 
@@ -109,7 +76,7 @@
     flex-direction: row;
     justify-content: flex-start;
     align-items: flex-start;
-    margin: rem 0;
+    margin: 1rem 0;
 }
 
 .app__skills-exp-works {
@@ -136,32 +103,23 @@
 }
 
 .app__skills-exp-year {
-    margin-right: 3rem;
+    margin-right: clamp(1rem, 2vw, 3rem);
 
     p {
         font-weight: 800;
         color: var(--secondary-color);
     }
-
-    @media screen and (max-width: 450px) {
-        margin-right: 1rem;
-    }
 }
 
 .skills-tooltip {
-    max-width: 300px !important;
+    max-width: clamp(18.75rem, 25vw, 31.25rem) !important;
     background-color: var(--white-color) !important;
     box-shadow: 0 0 25px rgba(0, 0, 0, 0.1) !important;
     border-radius: 100px !important;
-    padding:1rem !important;
+    padding: clamp(0.75rem, 1vw, 1rem) !important;
     text-align: center !important;
     color: var(--gray-color) !important;
-    line-height: 1.5 !important;
+    line-height: clamp(1.5, 1.2, 2) !important;
     opacity: 1 !important;
-
-    @media screen and (min-width: 2000px) {
-        font-size: 1.75rem !important;
-        max-width: 500px !important;
-        line-height: 2 !important;
-    }
+    font-size: clamp(0.9rem, 1.2vw, 1.75rem) !important;
 }

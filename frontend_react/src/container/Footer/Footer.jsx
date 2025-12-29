@@ -32,8 +32,11 @@ const Footer = () => {
         setLoading(false);
         setIsFormSubmitted(true);
       })
-      .catch((err) => console.log(err));
-
+      .catch((err) => {
+        console.error(err);
+        setLoading(false);
+        alert('Failed to send message. Please try again.');
+      });
   }
 
   return (

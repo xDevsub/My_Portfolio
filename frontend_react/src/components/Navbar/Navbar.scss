@@ -5,7 +5,7 @@
     justify-content: space-between;
     align-items: center;
 
-    padding: 1rem 2rem;
+    padding: clamp(0.75rem, 1vw, 1rem) clamp(1rem, 2vw, 2rem);
     background: rgba(255, 255, 255, 0.25);
     background-repeat: blur(4px);
     -webkit-backdrop-filter: blur(4px);
@@ -20,18 +20,11 @@
     display: flex;
     align-items: flex-start;
     cursor: pointer;
-}
 
-img {
-    margin: -3rem -3.5rem;
-    width: 150px;
-    height: 150px;
-
-    @media screen and (min-width: 2000px) {
-        width: 250px;
-        height: 60px;
-
-
+    img {
+        margin: clamp(-3.5rem, -3vw, -3rem) clamp(-3.75rem, -3.5vw, -3.5rem);
+        width: clamp(9.375rem, 12vw, 15.625rem);
+        height: clamp(9.375rem, 12vw, 15.625rem);
     }
 }
 
@@ -86,8 +79,8 @@ img {
 
 
 .app__navbar-menu {
-    width: 35px;
-    height: 35px;
+    width: clamp(2.1875rem, 2.5vw, 2.5rem);
+    height: clamp(2.1875rem, 2.5vw, 2.5rem);
     border-radius: 50%;
     position: relative;
 
@@ -109,7 +102,7 @@ img {
         right: 0;
         z-index: 5;
 
-        padding: 1rem;
+        padding: clamp(0.75rem, 1vw, 1rem);
 
         width: 80%;
         height: 100vh;
@@ -119,18 +112,16 @@ img {
         align-items: flex-end;
         flex-direction: column;
 
-
         background: url(../../assets/bgWhite.png);
         background-color: var(--white-color);
         background-size: cover;
         background-repeat: repeat;
 
-
         box-shadow: 0 0 20px rgba(168, 168, 168, 0.15);
 
         svg {
-            width: 35px;
-            height: 35px;
+            width: clamp(2.1875rem, 2.5vw, 2.5rem);
+            height: clamp(2.1875rem, 2.5vw, 2.5rem);
             color: var(--secondary-color);
             margin: 0.5rem 1rem;
         }
@@ -142,40 +133,36 @@ img {
             height: 100%;
             width: 100%;
 
-
             display: flex;
             justify-content: flex-start;
             align-items: flex-start;
             flex-direction: column;
 
             li {
-                margin: 1rem;
+                margin: clamp(0.75rem, 1vw, 1rem);
 
                 a {
                     color: var(--gray-color);
                     text-decoration: none;
                     text-transform: uppercase;
                     font-weight: 500;
+                    font-size: clamp(0.9rem, 1.2vw, 1.2rem);
 
                     transition: all 0.3s ease-in-out;
 
                     &:hover {
                         color: var(--secondary-color);
                     }
-
                 }
             }
         }
 
         @media screen and (min-width: 900px) {
             display: none;
-
         }
     }
 
     @media screen and (min-width: 900px) {
         display: none;
-
     }
-
 }
